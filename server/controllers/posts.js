@@ -1,0 +1,8 @@
+
+const getPosts = (req, res) => {
+    res.send('This works!');
+};
+
+export { 
+    getPosts
+};
