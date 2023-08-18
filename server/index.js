@@ -12,11 +12,11 @@ const PORT = process.env.PORT || 5000;
 
 // middlewares
 
-app.use('/posts', postRoutes);
-
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
+
+app.use('/posts', postRoutes);
 
 // connect to database
 const CONNECTION_URL = 'mongodb+srv://mern-media:media123@cluster0.8snuhrq.mongodb.net/';
